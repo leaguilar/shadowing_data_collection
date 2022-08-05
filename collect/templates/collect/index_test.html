@@ -1,0 +1,62 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'collect/style.css' %}">
+        {# <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" > #}
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    </head>
+
+
+<form method="post">
+
+  {% csrf_token %}
+
+{{form}}
+
+<div class="button-group">
+<button type="submit" class="btn btn-primary">End Interaction</button>
+</div>
+</td>
+<td style="width: 70%; height: 300px;">
+    <div id="container">
+
+  <div id="parent">
+    <button id="button1" type="button" onclick="myFunction('NEUOFF')">
+      Neuro Office
+    </button>
+    <img src="https://hospital.s3.eu-central-1.amazonaws.com/USZ_Shadowing.jpg" class="floorplan-img" >
+  </div>
+
+</div>
+
+
+</td>
+</tr>
+</tbody>
+</table>
+
+</form>
+
+    <script>
+
+    function myFunction(value) {
+        $("input[name=zone][value=" + value + "]").prop('checked', true).checkboxradio("refresh");
+    }
+    var originalSelection = $('#id_prev_observation').prop('selectedIndex');
+    $('#id_observation_type').on('change', function(){
+    var optionSelected = $("option:selected", this);
+    var valueSelected = this.value;
+    if (valueSelected == 'JO') {
+        console.log(originalSelection);
+        $('#id_prev_observation option[value='+originalSelection+']').prop('selected', true);
+    } else {
+        $('#id_prev_observation option[value=""]').prop('selected', true);
+    }
+    return true;
+    });
+
+    </script>
+</html>
