@@ -8,6 +8,9 @@ from datetime import datetime
 def index(request):
     observer = request.GET.get('observer')
     shift = request.GET.get('shift')
+    zone = request.GET.get('zone')
+    shadowing = request.GET.get('shadowing')
+
     context = {'latest_question_list': [1, 2],
                'form': ObservationForm(),
                'observer': observer
@@ -35,5 +38,17 @@ def index(request):
         context['form'].fields['observer_name'].initial = observer
     if shift:
         context['form'].fields['shift_type'].initial = shift
+
+    if shadowing:
+        shadowing = int(shadowing)
+        context['form'].fields[f'badge_{shadowing}'].initial = True
+
+        if request.method == 'GET':
+            context['form'].fields['observation_type'].initial = ObservationType.NewJourney
+
+    if zone:
+        context['form'].fields['zone'].initial = zone
+        context['form'].fields['observation_type'].initial = ObservationType.Zonal
+
     #return render(request, 'collect/index_test.html', context)
     return render(request, 'collect/index.html', context)

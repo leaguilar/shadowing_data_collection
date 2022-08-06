@@ -74,11 +74,15 @@
 <tr style="height: 18px;">
 <td style="width: 30%; height: 18px;">
 
-  Zone:
+  <strong>Zone:</strong>
   {% render_field form.zone class="form-check-input" %}
-
-  Interaction Type:
+  <br><br>
+  <strong>Interaction Type:</strong>
   {% render_field form.interaction_type class="form-check-input" %}
+
+    <br><br>
+    Comment: {% render_field form.comment class="form-control" %}
+
 
 <div class="button-group">
 <button type="submit" class="btn btn-primary">End Interaction</button>

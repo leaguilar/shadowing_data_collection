@@ -10,7 +10,6 @@ class ObservationType(models.TextChoices):
 
 
 class ObservationModel(models.Model):
-
     class Shifts(models.TextChoices):
         Morning = 'MO', 'Morning'
         Afternoon = 'AF', 'Afternoon'
@@ -46,6 +45,7 @@ class ObservationModel(models.Model):
 
     # fields of the model
     observer_name = models.CharField(max_length=100)
+    comment = models.CharField(max_length=100, blank=True)
 
     shift_type = models.CharField(
         max_length=2,
@@ -100,3 +100,7 @@ class ObservationModel(models.Model):
     badge_23 = models.BooleanField()
     badge_24 = models.BooleanField()
     badge_25 = models.BooleanField()
+
+    class Meta:
+        verbose_name = 'Observation'
+        verbose_name_plural = 'Observations'
