@@ -33,6 +33,7 @@ class ObservationModel(models.Model):
         nurse_station = 'NURSTA', 'Nurse station'
         neuro_offices = 'NEUOFF', 'Neuro offices'
         cockpit = 'COCPIT', 'Cockpit'
+        office_spaces = 'OFFSPA', 'Office spaces'
 
         corr_ft = 'CORRFT', 'Corridor Fast Track'
         corr_1 = 'CORR01', 'Corridor 1'

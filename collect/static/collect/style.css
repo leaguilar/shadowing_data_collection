@@ -1,19 +1,119 @@
 .floorplan-img {
     height: auto;
-    width: 100%;
-    max-width: 800px;
+    width: 600px;
     display: block;
 }
 
 #parent {
   position: relative;
+  width: 600px;
   display: flex;
 }
 
 #button1 {
   position: absolute;
-  top: 68%;
-  left: 5%;
+  top: 70%;
+  left: 25%;
+  display: block;
+  height: 20px;
+  width: 130px;
+}
+#button2 {
+  position: absolute;
+  top: 95%;
+  left: 58.5%;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button3 {
+  position: absolute;
+  top: 78%;
+  left: 3%;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button4 {
+  position: absolute;
+  top: 55%;
+  left: 58.5%;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button5 {
+  position: absolute;
+  top: 32%;
+  left: 58.5%;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button6 {
+  position: absolute;
+  top: 22%;
+  left: 27%;
+  display: block;
+  height: 20px;
+  width: 130px;
+}
+#button7 {
+  position: absolute;
+  top: 41%;
+  left: 58.5%;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button8 {
+  position: absolute;
+  top: 22%;
+  left: 58.5%;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button9 {
+  position: absolute;
+  top: 70%;
+  left: 58.5%;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button10 {
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 87%;
+  left: 48%;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button11 {
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 87%;
+  left: 68.5%;
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button12 {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  transform: rotate(-90deg);
+  display: block;
+  height: 20px;
+  width: 100px;
+}
+#button13 {
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 40%;
+  left: 75%;
   display: block;
   height: 20px;
   width: 100px;

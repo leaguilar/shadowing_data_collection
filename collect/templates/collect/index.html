@@ -91,8 +91,44 @@
 </td>
 <td style="width: 70%; height: 300px;">
     <div id="parent">
-      <button id="button1" type="button" onclick="myFunction('NEUOFF')">
-      Neuro Office
+      <button id="button1" type="button" onclick="myFunction('NUROPE')">
+      Nurse station open
+      </button>
+      <button id="button2" type="button" onclick="myFunction('NURSTA')">
+      Nurse station
+      </button>
+      <button id="button3" type="button" onclick="myFunction('NEUOFF')">
+      Neuro offices
+      </button>
+      <button id="button4" type="button" onclick="myFunction('COCPIT')">
+      Cockpit
+      </button>
+      <button id="button5" type="button" onclick="myFunction('OFFSPA')">
+      Office spaces
+      </button>
+      <button id="button6" type="button" onclick="myFunction('CORRFT')">
+      Corridor fast track
+      </button>
+      <button id="button7" type="button" onclick="myFunction('CORR01')">
+      Corridor1
+      </button>
+      <button id="button8" type="button" onclick="myFunction('CORR02')">
+      Corridor2
+      </button>
+      <button id="button9" type="button" onclick="myFunction('CORR03')">
+      Corridor3
+      </button>
+      <button id="button10" type="button" onclick="myFunction('CORR04')">
+      Corridor4
+      </button>
+      <button id="button11" type="button" onclick="myFunction('CORR05')">
+      Corridor5
+      </button>
+      <button id="button12" type="button" onclick="myFunction('CORR06')">
+      Corridor6
+      </button>
+      <button id="button13" type="button" onclick="myFunction('CORR07')">
+      Corridor7
       </button>
       <img src="https://hospital.s3.eu-central-1.amazonaws.com/USZ_Shadowing.jpg" class="floorplan-img" >
     </div>
@@ -108,7 +144,8 @@
     <script>
 
     function myFunction(value) {
-        $("input[name=zone][value=" + value + "]").prop('checked', true).checkboxradio("refresh");
+        $("input[name=zone][value=" + value + "]").prop('checked', true);
+        return true;
     }
     var originalSelection = $('#id_prev_observation').prop('selectedIndex');
     $('#id_observation_type').on('change', function(){
