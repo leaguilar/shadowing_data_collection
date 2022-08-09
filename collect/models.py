@@ -72,6 +72,7 @@ class ObservationModel(models.Model):
 
     prev_observation = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE)
 
+    page_load = models.DateTimeField()
     observation_start = models.DateTimeField()
     observation_end = models.DateTimeField(auto_now=True)
 

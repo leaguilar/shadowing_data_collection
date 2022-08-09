@@ -1,4 +1,4 @@
-from django.forms import ModelForm, RadioSelect
+from django.forms import ModelForm, RadioSelect, DateTimeInput
 from .models import ObservationModel
 
 
@@ -8,5 +8,6 @@ class ObservationForm(ModelForm):
         fields = '__all__'
         widgets = {
             'zone': RadioSelect,
-            'interaction_type': RadioSelect
+            'interaction_type': RadioSelect,
+            'observation_start': DateTimeInput(attrs={'type': 'datetime-local', 'step': '1'})
         }
